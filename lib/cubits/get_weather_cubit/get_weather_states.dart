@@ -19,4 +19,4 @@ class FailureWeatherState extends WeatherState {
 
   FailureWeatherState(this.error);
 }
-//
+

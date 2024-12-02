@@ -92,7 +92,7 @@ class WeatherForecastScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  '7-Days Forecast',
+                  '3-Days Forecast',
                   style: TextStyle(
                       color: Colors.white70,
                       fontSize: 20,

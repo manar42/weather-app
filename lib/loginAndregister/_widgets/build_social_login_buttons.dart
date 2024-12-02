@@ -8,7 +8,7 @@ Widget buildSocialLoginButtons(double screenWidth) {
     children: [
       Flexible(
           child: SocialLoginButton(
-              assetPath: 'assets/images/f.png', onTap: () {})),
+             assetPath:  'assets/images/f.png' , onTap: () {})),
       const SizedBox(
         width: 5,
       ),

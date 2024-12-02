@@ -1,5 +1,3 @@
-
-
 import 'package:weather_app/models/day.dart';
 import 'package:weather_app/models/hour.dart';
 

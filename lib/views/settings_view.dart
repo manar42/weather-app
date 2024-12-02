@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:weather_app/views/create_new_password.dart';
+
 import 'package:weather_app/widgets/custom_list_tile.dart';
 import 'package:weather_app/widgets/temperature_unit_provider.dart';
 
@@ -24,10 +24,13 @@ class _SettingState extends State<Setting> {
       appBar: AppBar(
         centerTitle: true,
         leading: Container(
-            margin: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8), color: Colors.white),
-            child: const BackButton()),
+          margin: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: Colors.white,
+          ),
+          child: const BackButton(),
+        ),
         backgroundColor: const Color(0xFF1D2837),
         title: const Text(
           'Settings',
@@ -57,33 +60,20 @@ class _SettingState extends State<Setting> {
                 title: const Text(
                   'Cellular Data',
                   style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
+             
               const CustomListTileWidget(
-                  icon: Icons.notifications,
-                  iconBackgroundColor: Colors.red,
-                  title: 'Notifications',
-                  trailingTitle: ''),
-              const CustomListTileWidget(
-                  icon: Icons.language,
-                  iconBackgroundColor: Color.fromARGB(255, 23, 97, 110),
-                  title: 'Language',
-                  trailingTitle: 'EN'),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return const CreateNewPassword();
-                  }));
-                },
-                child: const CustomListTileWidget(
-                    icon: Icons.password,
-                    iconBackgroundColor: Colors.blue,
-                    title: 'Change Password',
-                    trailingTitle: ''),
+                icon: Icons.language,
+                iconBackgroundColor: Color.fromARGB(255, 23, 97, 110),
+                title: 'Language',
+                trailingTitle: 'EN',
               ),
+           
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -91,8 +81,9 @@ class _SettingState extends State<Setting> {
                     padding: EdgeInsets.only(left: 15, top: 20),
                     child: Text(
                       'Temperature Unit',
-                      style:
-                          TextStyle(color: Color.fromARGB(255, 139, 139, 139)),
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 139, 139, 139),
+                      ),
                     ),
                   ),
                   CheckboxListTile(
@@ -114,7 +105,7 @@ class _SettingState extends State<Setting> {
                     onChanged: (newValue) {
                       temperatureNotifier.toggleTemperatureUnit();
                     },
-                  )
+                  ),
                 ],
               ),
               SwitchListTile(
@@ -128,9 +119,10 @@ class _SettingState extends State<Setting> {
                 title: const Text(
                   'Reset Identifier',
                   style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ],

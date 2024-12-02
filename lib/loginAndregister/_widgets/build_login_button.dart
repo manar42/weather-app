@@ -11,8 +11,8 @@ Widget buildButton(BuildContext context, double screenHeight, double screenWidth
         borderRadius: BorderRadius.circular(8),
       ),
       child: Center(
-        child: Text(
-          label,
+        child: Text (
+         label,
           style: TextStyle(
             color: Colors.white,
             fontSize: screenHeight * 0.025,

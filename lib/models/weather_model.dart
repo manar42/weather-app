@@ -8,7 +8,10 @@ class WeatherModel {
   final List<ForecastDay> forecast;
 
   WeatherModel(
-      {required this.location, required this.current, required this.forecast});
+      {required this.location,
+       required this.current, 
+       required this.forecast
+       });
 
   factory WeatherModel.fromJson(Map<String, dynamic> json) {
     var forecastList = json['forecast']['forecastday'] as List;

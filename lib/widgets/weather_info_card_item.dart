@@ -29,7 +29,7 @@ class WeatherInfoCardItem extends StatelessWidget {
           width: 0.8,
         ),
         borderRadius: BorderRadius.circular(15),
-        color: const Color(0xff461B7E),
+      //  color: const Color(0xff461B7E),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -41,7 +41,7 @@ class WeatherInfoCardItem extends StatelessWidget {
                 Text(
                   city,
                   style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Color(0xffFFFFFF)),
                 ),
@@ -56,13 +56,17 @@ class WeatherInfoCardItem extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 10),
+            
             Center(
               child: Column(
                 children: [
+               
+                   
                   Image.network(
                     'https:$image',
                     height: 100,
                     width: 100,
+                    
                   ),
                   const SizedBox(height: 5),
                   Text(

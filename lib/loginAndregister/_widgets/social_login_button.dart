@@ -1,16 +1,12 @@
-
 import 'package:flutter/material.dart';
-
 class SocialLoginButton extends StatelessWidget {
   final String assetPath;
   final VoidCallback onTap;
-
   const SocialLoginButton({
     super.key,
     required this.assetPath,
     required this.onTap,
   });
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

@@ -42,20 +42,7 @@ class CustomSearchTextField extends StatelessWidget {
               size: 25,
             ),
           ),
-          suffixIcon: IconButton(
-            onPressed: () {
-              if (textKey.currentState!.validate()) {
-                context
-                    .read<GetWeatherCubit>()
-                    .getWeather(cityName: textController.text.trim());
-              }
-            },
-            icon: Image.asset(
-              'assets/images/Icon.png',
-              height: 40,
-              width: 40,
-            ),
-          ),
+          
           enabledBorder: buildOutlineInputBorder(),
           focusedBorder: buildOutlineInputBorder(),
         ),

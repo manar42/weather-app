@@ -28,7 +28,7 @@ class _ForgetPageState extends State<ForgetPage> {
 
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const LoginView()),
+        MaterialPageRoute(builder: (context) => const LoginView  ()),
       );
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -122,7 +122,7 @@ class _ForgetPageState extends State<ForgetPage> {
                       ),
                     ),
                     child: const Text(
-                      'Send Code',
+                      'Send code',
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ),
@@ -163,3 +163,8 @@ class _ForgetPageState extends State<ForgetPage> {
     );
   }
 }
+
+
+
+
+

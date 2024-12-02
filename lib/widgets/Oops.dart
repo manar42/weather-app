@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
 class Oops extends StatelessWidget {
   const Oops({super.key, required this.message});
   final String message;
-
   @override
   Widget build(BuildContext context) {
     return Container(

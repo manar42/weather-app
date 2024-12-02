@@ -25,7 +25,6 @@ bool isCelsius = true;
     weatherData = widget.weatherService.getCurrentWeather(
         cityName: selectedCity); 
   }
-
   void _selectCity(String city) {
     setState(() {
       selectedCity = city;

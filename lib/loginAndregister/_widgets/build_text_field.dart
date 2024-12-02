@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
 class BuildTextField extends StatelessWidget {
+ 
+  final String hintText;
+  final bool isPassword;
+  final double screenHeight;
+  final TextEditingController? controller;
+  final bool isPasswordVisible; // New variable to track password visibility
+  final VoidCallback?
+      onTogglePasswordVisibility; 
+
   const BuildTextField({
     super.key,
     required this.hintText,
@@ -10,13 +19,8 @@ class BuildTextField extends StatelessWidget {
     this.isPasswordVisible = false,
     this.onTogglePasswordVisibility,
   });
-  final String hintText;
-  final bool isPassword;
-  final double screenHeight;
-  final TextEditingController? controller;
-  final bool isPasswordVisible; // New variable to track password visibility
-  final VoidCallback?
-      onTogglePasswordVisibility; // Callback for toggling visibility
+      
+      // Callback for toggling visibility
 
   @override
   Widget build(BuildContext context) {

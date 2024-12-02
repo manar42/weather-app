@@ -25,10 +25,10 @@ class _SearchViewBodyState extends State<SearchViewBody> {
   Widget build(BuildContext context) {
     List<String> cities = [
       'Cairo',
-      'London',
+      'Obour',
       'Paris',
       'Tokyo',
-      'New York',
+      'London',
       'Alex'
     ];
 
@@ -88,6 +88,8 @@ class _SearchViewBodyState extends State<SearchViewBody> {
 // استخدام BlocListener للاستجابة لحالة الطقس
 class WeatherBlocListener extends StatelessWidget {
   const WeatherBlocListener({super.key});
+  
+  get hour => null;
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +97,6 @@ class WeatherBlocListener extends StatelessWidget {
       listener: (context, state) {
         if (state is LoadedWeatherState) {
           final weatherModel = state.weatherModel;
-          final hour = weatherModel.forecast[0].hour.first;
 
           Navigator.push(
             context,
@@ -108,6 +109,7 @@ class WeatherBlocListener extends StatelessWidget {
           );
         } else if (state is FailureWeatherState) {
           final errorMessage = state.error;
+          // ignore: avoid_print
           print("Error fetching weather: $errorMessage");
         }
       },

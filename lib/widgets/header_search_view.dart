@@ -4,8 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:weather_app/views/Notification/notification_view.dart';
+
 import 'package:weather_app/views/settings_view.dart';
+
 class HeaderSearchView extends StatelessWidget {
   const HeaderSearchView({super.key});
   Future<DocumentSnapshot> getUserData() async {
@@ -73,25 +74,10 @@ class HeaderSearchView extends StatelessWidget {
               },
             ),
             const Expanded(child: SizedBox()),
-            Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: const Color(0xffCAD6FF),
-              ),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const NotificationView(),
-                    ),
-                  );
-                },
-                icon: const Icon(FontAwesomeIcons.bell),
-              ),
-            ),
+         
+            
+            
+         
             const SizedBox(
               width: 8,
             ),
@@ -117,10 +103,10 @@ class HeaderSearchView extends StatelessWidget {
             ),
             const SizedBox(
               width: 8,
-            ),
-          ],
-        ),
-      ),
-    );
+              ),
+          ])));
+        
+      
+    
   }
 }

@@ -32,9 +32,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
       setState(() {
         // statusMessage = "Username is required";
         ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-            content: Text('Username is required')),
-      );
+          const SnackBar(content: Text('Username is required')),
+        );
       });
       return;
     }
@@ -42,9 +41,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
       setState(() {
         // statusMessage = "Passwords do not match";
         ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-            content: Text('Passwords do not match')),
-      );
+          const SnackBar(content: Text('Passwords do not match')),
+        );
       });
       return;
     }
@@ -62,19 +60,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
         'email': emailController.text,
       });
 
-       WidgetsBinding.instance.addPostFrameCallback((_) {
-         Navigator.pushReplacement(
+      if (context.mounted) {
+        Navigator.pushReplacement(
+          // ignore: use_build_context_synchronously
           context,
           MaterialPageRoute(builder: (context) => const LoginView()),
         );
-      });
+      }
     } on FirebaseAuthException catch (e) {
       setState(() {
         // statusMessage = e.message ?? "Registration failed. Try again.";
         ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-            content: Text(e.message ?? "Registration failed. Try again.")),
-      );
+          SnackBar(
+              content: Text(e.message ?? "Registration failed. Try again.")),
+        );
       });
     }
   }
@@ -150,7 +149,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     },
                   ),
                   SizedBox(height: screenHeight * 0.03),
-                   buildButton(
+                  buildButton(
                     context,
                     screenHeight,
                     screenWidth,
@@ -166,7 +165,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   SizedBox(height: screenHeight * 0.05),
                   buildLoginText(context),
                   SizedBox(height: screenHeight * 0.02),
-                
                 ],
               ),
             ),
